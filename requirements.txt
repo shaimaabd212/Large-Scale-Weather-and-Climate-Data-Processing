@@ -1,0 +1,6 @@
+# Laptop development + notebook. The cluster uses the Spark it installs in /opt/spark.
+pyspark==3.5.3
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+jupyter

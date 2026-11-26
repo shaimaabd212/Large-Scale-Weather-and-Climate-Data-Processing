@@ -1,0 +1,18 @@
+# data is downloaded / generated, never committed
+data/raw/*
+data/sample/*
+data/export/*
+data/bronze/
+data/silver/
+data/gold/
+data/quality/
+
+build/
+logs/run_*.json
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+spark-warehouse/
+metastore_db/
+derby.log

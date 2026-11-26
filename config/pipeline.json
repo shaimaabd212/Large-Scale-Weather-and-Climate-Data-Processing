@@ -1,0 +1,43 @@
+{
+  "_comment": "Analysis parameters. Paths are NOT set here; they come from --base in run_pipeline.py.",
+
+  "elements": ["TMAX", "TMIN", "TAVG", "PRCP", "SNOW", "SNWD"],
+
+  "country_filter": [],
+  "_country_filter_help": "Empty = all countries. Otherwise FIPS codes, e.g. [\"LY\", \"EG\", \"TS\"]. Cuts data size a lot.",
+
+  "focus_countries": ["LY", "EG", "TS", "AG", "IT", "US"],
+  "_focus_countries_help": "Countries exported for plots in the notebook. LY=Libya, EG=Egypt, TS=Tunisia, AG=Algeria (FIPS codes).",
+
+  "valid_ranges": {
+    "TMAX": [-90.0, 60.0],
+    "TMIN": [-90.0, 60.0],
+    "TAVG": [-90.0, 60.0],
+    "PRCP": [0.0, 2000.0],
+    "SNOW": [0.0, 2000.0],
+    "SNWD": [0.0, 15000.0]
+  },
+
+  "completeness": {
+    "min_month_coverage": 0.8,
+    "min_valid_months_temp": 10,
+    "min_valid_months_prcp": 12,
+    "min_baseline_years": 3,
+    "min_years_for_trend": 8
+  },
+
+  "baseline_years": [2014, 2018],
+  "_baseline_help": "Reference period for climatology/anomalies. The WMO standard is 1991-2020 if you download that range.",
+
+  "thresholds": {
+    "hot_day_c": 35.0,
+    "summer_day_c": 25.0,
+    "tropical_night_c": 20.0,
+    "wet_day_mm": 1.0,
+    "heavy_prcp_mm": 10.0,
+    "very_heavy_prcp_mm": 20.0
+  },
+
+  "grid_size_deg": 5.0,
+  "top_n_extremes": 100
+}
